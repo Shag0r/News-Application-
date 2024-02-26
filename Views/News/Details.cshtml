@@ -1,0 +1,30 @@
+﻿@model NewsApplication.Models.News
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>News</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.newsName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.newsName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.newsDescription)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.newsDescription)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.newsID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
